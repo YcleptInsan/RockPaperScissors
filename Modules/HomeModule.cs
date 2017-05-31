@@ -2,6 +2,7 @@ using Nancy;
 using System;
 using System.Collections.Generic;
 
+
 namespace RockPaperScissors
 {
   public class HomeModule : NancyModule
@@ -9,15 +10,15 @@ namespace RockPaperScissors
     public HomeModule()
     {
       Get["/"] = _ => View["index.cshtml"];
-      Get["/input1"] = _ => {
-      RockPaperScissorsOutcome Outcome = new RockPaperScissorsOutcome();
-        string input1 = Request.Query["input1"];
-        return View["result.cshtml", input1];
-      };
-      Get["/input2"] = _ => {
-      RockPaperScissorsOutcome Outcome = new RockPaperScissorsOutcome();
-        string input2 = Request.Query["input2"];
-        return View["result.cshtml", outcome];
+      Post["/play"] = _ => {
+        RockPaperScissorsOutcome Outcome = new RockPaperScissorsOutcome(Request.Form["input1"], Request.Form["input2"]);
+        string input1 = Outcome.GetInput1();
+        Console.WriteLine(input1);
+        string input2 =  Outcome.GetInput2();
+        Console.WriteLine(input2);
+        string winner = Outcome.GetCheckOutcome(input1, input2);
+        Console.WriteLine(winner);
+        return View["result.cshtml", winner];
       };
     }
   }

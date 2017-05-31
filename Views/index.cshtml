@@ -3,10 +3,14 @@
 }
 
 <h1>Rock Paper Scissors</h1>
-<form action="/input1" method="get">
+<form action="/play" method="post">
   <div class="form-group">
     <label for="input1">Player One Choose Your Weapon:</label>
     <input class="form-control" type="text" name="input1" id="input1">
   </div>
-  <a href="player2.cshtml">Submit</a>
+  <div class="form-group">
+    <label for="input2">Player Two Choose Your Weapon:</label>
+    <input class="form-control" type="text" name="input2" id="input2">
+  </div>
+  <button type="submit" class="btn btn-info" name="button">Fight!</button>
 </form>

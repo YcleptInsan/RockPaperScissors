@@ -7,7 +7,7 @@ namespace RockPaperScissors
   {
     private string _input1;
     private string _input2;
-    private string _outcome;
+    private string _winner;
 
     public RockPaperScissorsOutcome(string input1, string input2)
     {
@@ -18,7 +18,7 @@ namespace RockPaperScissors
     {
       return _input1;
     }
-    public void SetInput1()
+    public void SetInput1(string input1)
     {
      _input1 = input1;
     }
@@ -26,18 +26,18 @@ namespace RockPaperScissors
     {
       return _input2;
     }
-    public void SetInput2()
+    public void SetInput2(string input2)
     {
       _input2 = input2;
     }
 
-    public string GetOutcome()
+    public string GetWinner()
     {
-      return _outcome;
+      return _winner;
     }
-    public void SetOutcome()
+    public void SetWinner(string winner)
     {
-      _outcome = outcome;
+      _winner = winner;
     }
 
     public string  GetCheckOutcome(string input1, string input2)
