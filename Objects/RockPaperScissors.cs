@@ -28,9 +28,18 @@ namespace RockPaperScissors
     }
     public void SetInput2()
     {
-     _input2 = input2;
+      _input2 = input2;
     }
-    public  GetOutcome()
+
+    public string GetOutcome()
+    {
+      return _outcome;
+    }
+    public void SetOutcome()
+    {
+      _outcome = outcome;
+    }
+
     public string  GetCheckOutcome(string input1, string input2)
     {
       if(input1 == "rock"  && input2 == "rock")
