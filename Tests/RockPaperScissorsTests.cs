@@ -4,17 +4,31 @@ namespace RockPaperScissors
 {
   public class RockPaperScissorsTests
   {
+    // [Fact]
+    // public void Test1_Outcome_Check()
+    // {
+    //   //arrange
+    //   RockPaperScissorsOutcome Outcome = new RockPaperScissorsOutcome("rock");
+    //
+    //   //act
+    //   //assert
+    //   Assert.Equal("rock", Outcome.GetInput1());
+    // }
+
     [Fact]
-    public void Test1_Outcome_Check()
+    public void Test2_Outcome_Draw()
     {
       //arrange
-      RockPaperScissorsOutcome Outcome = new RockPaperScissorsOutcome("rock");
+      string input1 = "rock";
+      string input2 = "rock";
+      RockPaperScissorsOutcome Outcome = new RockPaperScissorsOutcome();
+
 
       //act
-      // string result = Outcome.Check(input1);
+      string result = Outcome.GetCheckOutcome(input1, input2);
 
       //assert
-      Assert.Equal("rock", Outcome.GetInput1());
+      Assert.Equal("Draw", result);
     }
   }
 }

@@ -3,24 +3,25 @@ using System;
 
 namespace RockPaperScissors
 {
-    public class RockPaperScissorsOutcome
+  public class RockPaperScissorsOutcome
+  {
+    public string  GetCheckOutcome(string input1, string input2)
     {
-      private string _input1;
-
-      public RockPaperScissorsOutcome(string input1)
+      if(input1 == "rock" && input2 == "scissors")
       {
-        _input1 = input1;
+        return (input1 + " Wins");
+      }
+      else if(input1 == "rock"  && input2 == "rock")
+      {
+        return "Draw";
       }
 
-      public string GetInput1()
+      else
       {
-        return _input1;
-      }
-
-      public void SetInput(string input1)
-      {
-        _input1 = input1;
+        return "Nick";
       }
 
     }
+
+  }
 }
