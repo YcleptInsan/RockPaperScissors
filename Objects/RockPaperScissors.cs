@@ -5,6 +5,32 @@ namespace RockPaperScissors
 {
   public class RockPaperScissorsOutcome
   {
+    private string _input1;
+    private string _input2;
+    private string _outcome;
+
+    public RockPaperScissorsOutcome(string input1, string input2)
+    {
+      _input1 = input1;
+      _input2 = input2;
+    }
+    public string GetInput1()
+    {
+      return _input1;
+    }
+    public void SetInput1()
+    {
+     _input1 = input1;
+    }
+    public string GetInput2()
+    {
+      return _input2;
+    }
+    public void SetInput2()
+    {
+     _input2 = input2;
+    }
+    public  GetOutcome()
     public string  GetCheckOutcome(string input1, string input2)
     {
       if(input1 == "rock"  && input2 == "rock")
@@ -25,10 +51,8 @@ namespace RockPaperScissors
       }
       else
       {
-        return "Nick";
+        return (input2 + " Wins");
       }
-
     }
-
   }
 }
